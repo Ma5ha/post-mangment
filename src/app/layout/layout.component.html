@@ -1,0 +1,26 @@
+<div
+  class="header border border-primary border-top-0 border-right-0 border-left-0"
+>
+  <app-navigation>
+    <a class="nav-link" [routerLink]="['/home']"
+      ><h3 class="text-center font-w-600">Logo</h3></a
+    >
+  </app-navigation>
+</div>
+<div class="main container-fluid d-flex">
+  <div class="scroll">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div
+  class="footer border border-primary border-bottom-0 border-right-0 border-left-0"
+>
+  <app-navigation>
+    <a class="nav-link font-w-600">
+      <div class="container-fluid d-flex" [routerLink]="['/home']">
+        <h3>Mladen Blagovcanin</h3>
+      </div>
+    </a>
+  </app-navigation>
+</div>

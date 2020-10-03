@@ -1,18 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { LayoutComponent } from "./layout/layout.component";
+import { NavigationComponent } from "./navigation/navigation.component";
+
+import { PostsModule } from "./posts-feature/posts.module";
+import { CommentsModule } from "./comments-feature/comments.module";
+import { SidebarToggleComponent } from './sidebar-toggle/sidebar-toggle.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, LayoutComponent, NavigationComponent, SidebarToggleComponent],
+  imports: [BrowserModule, AppRoutingModule, PostsModule, CommentsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

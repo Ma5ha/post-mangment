@@ -1,0 +1,23 @@
+<ng-container *ngIf="comments">
+  <div class="userPostDetails">
+    <div class="postDetails border border-primary">
+      <app-post-details [post]="post"></app-post-details>
+    </div>
+    <div class="userDetails border border-primary">
+      <app-user-info [user]="user"></app-user-info>
+    </div>
+  </div>
+
+  <div class="postComments border border-primary">
+    <div class="title border-bottom border-primary">
+      <h3 class="ont-weight-light">Post Comments</h3>
+    </div>
+
+    <div class="comments">
+      <app-post-comment
+        *ngFor="let comment of comments"
+        [comment]="comment"
+      ></app-post-comment>
+    </div>
+  </div>
+</ng-container>

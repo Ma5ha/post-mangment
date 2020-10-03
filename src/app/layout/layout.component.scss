@@ -1,0 +1,35 @@
+:host {
+  display: grid;
+  grid-template-areas: "h" "m" "f";
+  // min-height: 96vh;
+  grid-template-rows: 10% 78% 10%;
+  height: 100vh;
+  width: 100vw;
+  gap: 2%;
+}
+
+.header {
+  grid-area: h;
+  display: block;
+}
+
+.footer {
+  grid-area: f;
+  display: block;
+}
+
+.main {
+  grid-area: m;
+  display: block;
+  overflow-y: auto;
+  padding: 0 2% 0 2%;
+}
+.scroll {
+  overflow-y: auto;
+}
+.sideMenu {
+  display: flex;
+  z-index: 999999;
+  right: 0;
+  max-width: 100%;
+}

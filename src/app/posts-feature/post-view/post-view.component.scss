@@ -1,0 +1,45 @@
+:host {
+  display: grid;
+  position: relative;
+  width: 94vw;
+  height: 78vh;
+  grid-template-areas: "a b";
+  grid-template-columns: 65% 32%;
+  grid-column-gap: 2%;
+}
+
+.userPostDetails {
+  display: grid;
+  grid-area: a;
+  grid-template-areas:
+    "a"
+    "b";
+  grid-row-gap: 2%;
+  grid-template-rows: 49% 49%;
+}
+
+.postComments {
+  grid-area: b;
+
+  display: grid;
+  grid-template-areas: "title" "comments ";
+  grid-template-rows: 10% 90%;
+}
+
+.title {
+  grid-area: title;
+  border-bottom: solid;
+  text-align: center;
+}
+
+.comments {
+  grid-area: comments;
+  overflow-y: auto;
+}
+.postDetails {
+  grid-area: a;
+}
+
+.userDetails {
+  grid-area: b;
+}
