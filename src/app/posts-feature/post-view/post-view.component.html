@@ -1,7 +1,11 @@
 <ng-container *ngIf="comments">
   <div class="userPostDetails">
     <div class="postDetails border border-primary">
-      <app-post-details [post]="post"></app-post-details>
+      <app-post-details [post]="post"
+        ><button class="btn btn-primary" (click)="editPost()">
+          Edit Post
+        </button></app-post-details
+      >
     </div>
     <div class="userDetails border border-primary">
       <app-user-info [user]="user"></app-user-info>

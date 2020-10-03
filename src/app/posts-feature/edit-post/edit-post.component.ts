@@ -19,6 +19,10 @@ export class EditPostComponent implements OnInit {
     this.postForm();
   }
 
+  close() {
+    this.activeModal.close(this.postEdit.value);
+  }
+
   postForm() {
     this.postEdit = new FormGroup({
       title: new FormControl(this.post.title),

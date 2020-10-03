@@ -14,4 +14,11 @@ export class PostService {
   getPost(id: number) {
     return this.postsService.get<post>(environment.api.posts() + `/${id}`);
   }
+
+  edit(post: post) {
+    return this.postsService.put<post>(
+      environment.api.posts() + `/${post.id}`,
+      post
+    );
+  }
 }
