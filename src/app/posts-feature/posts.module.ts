@@ -1,4 +1,3 @@
-import { NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
 import { CommentsModule } from "./../comments-feature/comments.module";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
@@ -26,7 +25,6 @@ import { ReactiveFormsModule } from "@angular/forms";
     HttpClientModule,
     CommentsModule,
     ReactiveFormsModule,
-    NgbModalModule,
   ],
   exports: [PostsViewComponent, PostViewComponent],
 })
