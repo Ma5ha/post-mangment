@@ -1,21 +1,33 @@
-<div [formGroup]="postEdit">
-  <div>
-    <p class="font-weight-bold">Post details</p>
-  </div>
+<div class="modal-header">
+  <h5 class="modal-title">Edit Post</h5>
+</div>
+<div class="modal-body">
+  <div [formGroup]="postEdit">
+    <div>
+      <h6 class="font-weight-normal">Edit title</h6>
+      <p class="font-weight-lighter">
+        <textarea formControlName="title"> </textarea>
+      </p>
+    </div>
 
-  <div>
-    <h6 class="font-weight-normal">Edit title</h6>
-    <p class="font-weight-lighter">
-      <textarea formControlName="title"> </textarea>
-    </p>
-  </div>
-
-  <div>
-    <h6 class="font-weight-normal">Edit body</h6>
-    <p class="font-weight-lighter">
-      <textarea formControlName="body"></textarea>
-    </p>
+    <div>
+      <h6 class="font-weight-normal">Edit body</h6>
+      <p class="font-weight-lighter">
+        <textarea formControlName="body"></textarea>
+      </p>
+    </div>
   </div>
 </div>
-
-<button (click)="close()">close</button>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-secondary"
+    data-dismiss="modal"
+    (click)="close()"
+  >
+    Dismiss
+  </button>
+  <button type="button " class="btn btn-primary" (click)="submitChanges()">
+    Save changes
+  </button>
+</div>

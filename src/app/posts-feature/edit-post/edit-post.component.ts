@@ -20,10 +20,14 @@ export class EditPostComponent implements OnInit {
   }
 
   close() {
+    this.activeModal.close();
+  }
+
+  submitChanges() {
     this.activeModal.close(this.postEdit.value);
   }
 
-  postForm() {
+  private postForm() {
     this.postEdit = new FormGroup({
       title: new FormControl(this.post.title),
       body: new FormControl(this.post.body),
