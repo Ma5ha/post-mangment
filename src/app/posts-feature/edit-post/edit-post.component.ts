@@ -1,6 +1,7 @@
 import { post } from "./../post.type";
 import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
 import { Component, Input, OnInit } from "@angular/core";
+import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-edit-post",
@@ -12,13 +13,13 @@ export class EditPostComponent implements OnInit {
   post: post;
 
   postEdit: FormGroup;
-  constructor() {}
+  constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {
-    this.form();
+    this.postForm();
   }
 
-  form() {
+  postForm() {
     this.postEdit = new FormGroup({
       title: new FormControl(this.post.title),
       body: new FormControl(this.post.body),

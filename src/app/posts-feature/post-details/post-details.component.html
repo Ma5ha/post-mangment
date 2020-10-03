@@ -1,23 +1,14 @@
-<ng-container [ngSwitch]="edit">
-  <ng-container *ngSwitchCase="true">
-    <app-edit-post [post]="post"></app-edit-post>
-    <button class="btn btn-primary" (click)="toggle()">Edit post</button>
-  </ng-container>
+<div>
+  <p class="font-weight-bold">Post details</p>
+</div>
 
-  <ng-container *ngSwitchDefault>
-    <div>
-      <p class="font-weight-bold">Post details</p>
-    </div>
+<div>
+  <h6 class="font-weight-normal">Title</h6>
+  <p class="font-weight-lighter">{{ post.title }}</p>
+</div>
 
-    <div>
-      <h6 class="font-weight-normal">Title</h6>
-      <p class="font-weight-lighter">{{ post.title }}</p>
-    </div>
-
-    <div>
-      <h6 class="font-weight-normal">Post body</h6>
-      <p class="font-weight-lighter">{{ post.body }}</p>
-    </div>
-    <button class="btn btn-primary" (click)="toggle()">Edit post</button>
-  </ng-container>
-</ng-container>
+<div>
+  <h6 class="font-weight-normal">Post body</h6>
+  <p class="font-weight-lighter">{{ post.body }}</p>
+</div>
+<ng-content></ng-content>

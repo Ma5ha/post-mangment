@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+
 import { post } from "../post.type";
 
 @Component({
@@ -13,8 +14,4 @@ export class PostDetailsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggle() {
-    this.edit = !this.edit;
-  }
 }
