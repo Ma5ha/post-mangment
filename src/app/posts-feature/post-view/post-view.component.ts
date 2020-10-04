@@ -54,14 +54,13 @@ export class PostViewComponent implements OnInit {
   }
 
   editPost() {
-    // const modalRef = this.modalService.open(EditPostComponent);
+    const modalRef = this.modalService.open(EditPostComponent);
 
-    // modalRef.componentInstance.post = this.post;
-    // modalRef.result.then((x) => {
-    //   this.edit({ ...this.post, ...x });
-    // });
-
-    this.showSuccess();
+    modalRef.componentInstance.post = this.post;
+    modalRef.result.then((x) => {
+      this.edit({ ...this.post, ...x });
+      this.showSuccess();
+    });
   }
 
   private edit(post: post) {
@@ -69,9 +68,12 @@ export class PostViewComponent implements OnInit {
   }
 
   showSuccess() {
-    this.toastService.show("I am a success toast", {
-      classname: "bg-success text-light",
-      delay: 10000,
-    });
+    this.toastService.show(
+      `You have successfully updated post ${this.post.id}`,
+      {
+        classname: "bg-success text-light",
+        delay: 10000,
+      }
+    );
   }
 }
