@@ -20,6 +20,7 @@ export class PostViewComponent implements OnInit {
   post: post;
   user: User;
   comments: comment[];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private postService: PostService,
@@ -28,6 +29,13 @@ export class PostViewComponent implements OnInit {
     private modalService: NgbModal,
     public toastService: ToastService
   ) {}
+
+  get load() {
+    if (this.post && this.user && this.comments) {
+      return true;
+    }
+    return false;
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((param) => {
@@ -57,19 +65,24 @@ export class PostViewComponent implements OnInit {
     const modalRef = this.modalService.open(EditPostComponent);
 
     modalRef.componentInstance.post = this.post;
-    modalRef.result.then((x) => {
-      this.edit({ ...this.post, ...x });
-      this.showSuccess();
-    });
+    modalRef.result
+      .then((x) => {
+        this.edit({ ...this.post, ...x });
+      })
+      .catch((x) => x);
   }
 
   private edit(post: post) {
+    if (this.post !== post) {
+      this.showSuccess();
+    }
+
     this.postService.edit(post).subscribe((x) => (this.post = x));
   }
 
   showSuccess() {
     this.toastService.show(
-      `You have successfully updated post ${this.post.id}`,
+      `You have successfully updated post number ${this.post.id}`,
       {
         classname: "bg-success text-light",
         delay: 10000,

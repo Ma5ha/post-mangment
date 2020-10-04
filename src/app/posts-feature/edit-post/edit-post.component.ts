@@ -20,7 +20,7 @@ export class EditPostComponent implements OnInit {
   }
 
   close() {
-    this.activeModal.close();
+    this.activeModal.dismiss();
   }
 
   submitChanges() {
