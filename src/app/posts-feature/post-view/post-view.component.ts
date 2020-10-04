@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
 import { User } from "../user";
 import { comment } from "src/app/comments-feature/comment";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { ToastService } from "src/app/toast-feature/toast.service";
 
 @Component({
   selector: "app-post-view",
@@ -24,7 +25,8 @@ export class PostViewComponent implements OnInit {
     private postService: PostService,
     private userService: UserService,
     private commentsService: CommentService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -52,15 +54,24 @@ export class PostViewComponent implements OnInit {
   }
 
   editPost() {
-    const modalRef = this.modalService.open(EditPostComponent);
+    // const modalRef = this.modalService.open(EditPostComponent);
 
-    modalRef.componentInstance.post = this.post;
-    modalRef.result.then((x) => {
-      this.edit({ ...this.post, ...x });
-    });
+    // modalRef.componentInstance.post = this.post;
+    // modalRef.result.then((x) => {
+    //   this.edit({ ...this.post, ...x });
+    // });
+
+    this.showSuccess();
   }
 
   private edit(post: post) {
     this.postService.edit(post).subscribe((x) => (this.post = x));
+  }
+
+  showSuccess() {
+    this.toastService.show("I am a success toast", {
+      classname: "bg-success text-light",
+      delay: 10000,
+    });
   }
 }

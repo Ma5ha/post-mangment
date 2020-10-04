@@ -11,6 +11,7 @@ import { UserInfoComponent } from "./user-info/user-info.component";
 import { PostCommentComponent } from "./post-comment/post-comment.component";
 import { EditPostComponent } from "./edit-post/edit-post.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { ToastModule } from "../toast-feature/toast.module";
 @NgModule({
   declarations: [
     PostsViewComponent,
@@ -27,6 +28,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     CommentsModule,
     ReactiveFormsModule,
     NgbModalModule,
+
+    ToastModule,
   ],
   exports: [PostsViewComponent, PostViewComponent],
 })
