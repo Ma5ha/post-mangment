@@ -1,32 +1,46 @@
-<div *ngIf="posts">
-  <table class="table table-bordered table-hover table-sm">
-    <thead>
-      <tr>
-        <th class="id" scope="col" (click)="postReverse()">ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Body</th>
-      </tr>
-    </thead>
-    <tbody>
-      <app-post-row
-        *ngFor="let post of displayedPosts"
-        [post]="post"
-      ></app-post-row>
-    </tbody>
-  </table>
-  <div class="margin">
-    <ngb-pagination
-      [collectionSize]="collectionSize"
-      [(page)]="page"
-      [pageSize]="pageSize"
-      (pageChange)="refreshPosts()"
-    >
-    </ngb-pagination>
-  </div>
-</div>
-
-<ng-container *ngIf="!posts">
+<ng-container *ngIf="!posts && !comments">
   <div class="spinner-grow text-primary centerMe" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </ng-container>
+
+<div class="layout">
+  <div class="table">
+    <div *ngIf="posts">
+      <table class="table table-bordered table-hover table-sm">
+        <thead>
+          <tr>
+            <th class="id" scope="col" (click)="postReverse()">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+          </tr>
+        </thead>
+        <tbody>
+          <app-post-row
+            *ngFor="let post of displayedPosts"
+            [post]="post"
+          ></app-post-row>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    class="comments rounded shadow p-3 mb-5 bg-white rounded"
+    *ngIf="comments"
+  >
+    <h6>Lasstest comments</h6>
+    <app-post-comment
+      *ngFor="let comment of comments"
+      [comment]="comment"
+    ></app-post-comment>
+  </div>
+</div>
+<div class="margin">
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    (pageChange)="refreshPosts()"
+  >
+  </ngb-pagination>
+</div>

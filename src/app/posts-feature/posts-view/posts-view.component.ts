@@ -1,6 +1,8 @@
+import { CommentService } from "./../../comments-feature/comment.service";
 import { PostService } from "./../post.service";
 import { Component, OnInit } from "@angular/core";
 import { post } from "../post.type";
+import { comment } from "src/app/comments-feature/comment";
 
 @Component({
   selector: "app-posts-view",
@@ -13,13 +15,18 @@ export class PostsViewComponent implements OnInit {
   displayedPosts: post[];
   pageSize = 5;
   collectionSize;
-  constructor(private postsService: PostService) {}
+  comments: comment[];
+  constructor(
+    private postsService: PostService,
+    private commentService: CommentService
+  ) {}
 
   ngOnInit(): void {
-    this.get();
+    this.getPosts();
+    this.getComments();
   }
 
-  get(): void {
+  getPosts(): void {
     this.postsService.get().subscribe((posts) => {
       this.posts = posts;
       this.refreshPosts();
@@ -28,6 +35,15 @@ export class PostsViewComponent implements OnInit {
   }
   postReverse() {
     this.posts.reverse();
+    this.refreshPosts();
+  }
+
+  getComments() {
+    this.commentService
+      .get()
+      .subscribe(
+        (comments) => (this.comments = comments.reverse().slice(0, 4))
+      );
   }
 
   refreshPosts() {
