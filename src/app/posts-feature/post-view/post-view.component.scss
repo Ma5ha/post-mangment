@@ -24,6 +24,7 @@
   display: grid;
   grid-template-areas: "title" "comments ";
   grid-template-rows: 10% 90%;
+  overflow-y: auto;
 }
 
 .title {
@@ -34,7 +35,6 @@
 
 .comments {
   grid-area: comments;
-  overflow-y: auto;
 }
 .postDetails {
   grid-area: a;
