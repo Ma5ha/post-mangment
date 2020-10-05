@@ -1,9 +1,24 @@
 :host {
-  display: block;
+  display: grid;
   text-align: center;
   padding: 1em;
+  grid-template-areas: "a" "b";
 }
 
+.title {
+  grid-area: a;
+  display: grid;
+  grid-template-areas: ". title button";
+  grid-template-columns: 25% 50% 25%;
+}
+
+.body {
+  grid-area: b;
+}
 .column {
   display: flex;
+}
+
+.button {
+  float: right;
 }
