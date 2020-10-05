@@ -8,3 +8,13 @@ table {
   cursor: pointer;
   color: #007bff !important;
 }
+
+.margin {
+  margin: auto;
+  display: table;
+  padding: 0.5em;
+}
+
+:host {
+  display: block;
+}

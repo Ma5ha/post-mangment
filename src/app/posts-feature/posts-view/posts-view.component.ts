@@ -8,8 +8,11 @@ import { post } from "../post.type";
   styleUrls: ["./posts-view.component.scss"],
 })
 export class PostsViewComponent implements OnInit {
+  page = 1;
   posts: post[];
-
+  displayedPosts: post[];
+  pageSize = 5;
+  collectionSize;
   constructor(private postsService: PostService) {}
 
   ngOnInit(): void {
@@ -17,9 +20,22 @@ export class PostsViewComponent implements OnInit {
   }
 
   get(): void {
-    this.postsService.get().subscribe((posts) => (this.posts = posts));
+    this.postsService.get().subscribe((posts) => {
+      this.posts = posts;
+      this.refreshPosts();
+      this.collectionSize = posts.length;
+    });
   }
   postReverse() {
     this.posts.reverse();
+  }
+
+  refreshPosts() {
+    this.displayedPosts = this.posts
+      .map((post, i) => ({ id: i + 1, ...post }))
+      .slice(
+        (this.page - 1) * this.pageSize,
+        (this.page - 1) * this.pageSize + this.pageSize
+      );
   }
 }

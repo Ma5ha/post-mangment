@@ -1,15 +1,29 @@
-<table class="table table-bordered table-hover table-sm" *ngIf="posts">
-  <thead>
-    <tr>
-      <th class="id" scope="col" (click)="postReverse()">ID</th>
-      <th scope="col">Title</th>
-      <th scope="col">Body</th>
-    </tr>
-  </thead>
-  <tbody>
-    <app-post-row *ngFor="let post of posts" [post]="post"></app-post-row>
-  </tbody>
-</table>
+<div *ngIf="posts">
+  <table class="table table-bordered table-hover table-sm">
+    <thead>
+      <tr>
+        <th class="id" scope="col" (click)="postReverse()">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <app-post-row
+        *ngFor="let post of displayedPosts"
+        [post]="post"
+      ></app-post-row>
+    </tbody>
+  </table>
+  <div class="margin">
+    <ngb-pagination
+      [collectionSize]="collectionSize"
+      [(page)]="page"
+      [pageSize]="pageSize"
+      (pageChange)="refreshPosts()"
+    >
+    </ngb-pagination>
+  </div>
+</div>
 
 <ng-container *ngIf="!posts">
   <div class="spinner-grow text-primary centerMe" role="status">

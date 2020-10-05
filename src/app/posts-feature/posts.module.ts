@@ -1,4 +1,7 @@
-import { NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
+import {
+  NgbModalModule,
+  NgbPaginationModule,
+} from "@ng-bootstrap/ng-bootstrap";
 import { CommentsModule } from "./../comments-feature/comments.module";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
@@ -30,6 +33,7 @@ import { ToastModule } from "../toast-feature/toast.module";
     NgbModalModule,
 
     ToastModule,
+    NgbPaginationModule,
   ],
   exports: [PostsViewComponent, PostViewComponent],
 })
