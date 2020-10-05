@@ -5,7 +5,7 @@
   font-size-adjust: 1;
 }
 
-div {
+.flexRow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,4 +20,14 @@ p {
 
 .m {
   margin: calc(1em / 9);
+  // margin: auto;
+  margin-right: 1em;
+}
+.warpInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  margin-left: 30%;
+  width: 66%;
 }
