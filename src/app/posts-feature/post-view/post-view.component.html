@@ -1,7 +1,7 @@
 <app-toast></app-toast>
 <ng-container *ngIf="load">
   <div class="userPostDetails">
-    <div class="postDetails border border-primary">
+    <div class="postDetails rounded shadow p-3 mb-5 bg-white rounded">
       <app-post-details [post]="post"
         ><button
           class="btn btn-white text-primary rounded-pill border border-primary"
@@ -11,7 +11,7 @@
         </button></app-post-details
       >
     </div>
-    <div class="userDetails">
+    <div class="userDetails rounded shadow p-3 mb-5 bg-white rounded">
       <app-user-info [user]="user"></app-user-info>
     </div>
   </div>
