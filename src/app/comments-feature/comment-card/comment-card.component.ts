@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 import { comment } from "../comment";
 
@@ -11,7 +11,7 @@ export class CommentCardComponent {
   @Input()
   comment: comment;
   constructor(private router: Router) {}
-  @HostListener("click")
+
   goToPost() {
     // this.router.navigate(["details", 11]);
     this.router.navigate([

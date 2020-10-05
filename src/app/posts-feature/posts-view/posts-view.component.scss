@@ -1,10 +1,30 @@
 table {
   cursor: default;
-  width: 80%;
+  width: 87%;
   margin: auto;
 }
 
 .id {
   cursor: pointer;
   color: #007bff !important;
+}
+
+.margin {
+  margin: auto;
+  display: table;
+  padding: 0.5em;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas: "a b";
+  grid-template-columns: 70% 30%;
+}
+.table {
+  grid-area: a;
+}
+
+.comments {
+  grid-area: b;
+  overflow-y: auto;
 }

@@ -12,6 +12,6 @@ import { PostCommentsComponent } from "./post-comments/post-comments.component";
     PostCommentsComponent,
   ],
   imports: [CommonModule, HttpClientModule],
-  exports: [CommentsListComponent, PostCommentsComponent],
+  exports: [CommentsListComponent, PostCommentsComponent, CommentCardComponent],
 })
 export class CommentsModule {}
