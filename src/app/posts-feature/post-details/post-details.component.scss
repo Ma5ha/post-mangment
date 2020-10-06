@@ -1,6 +1,6 @@
 .details {
   display: grid;
-  text-align: center;
+  text-align: left;
   padding: 1em;
   grid-template-areas: "a" "b";
 }
@@ -8,8 +8,13 @@
 .title {
   grid-area: a;
   display: grid;
-  grid-template-areas: ". title button";
-  grid-template-columns: 25% 50% 25%;
+  text-align: left;
+  grid-template-areas: "title button";
+  grid-template-columns: 70% 25%;
+  gap: 5%;
+}
+h3 {
+  text-decoration: underline #007bff;
 }
 
 .body {
@@ -20,5 +25,5 @@
 }
 
 .button {
-  float: right;
+  margin: auto;
 }
