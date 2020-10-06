@@ -2,10 +2,10 @@
   display: grid;
   grid-template-areas: "h" "m" "f";
   // min-height: 96vh;
-  grid-template-rows: 10% 78% 10%;
-  height: 98vh;
+  grid-template-rows: 10% 80% 10%;
+  height: 100vh;
   width: 100vw;
-  gap: 2%;
+  // gap: 2%;
 }
 
 .header {
@@ -27,6 +27,7 @@
 .scroll {
   overflow-y: auto;
   width: 100vw;
+  padding: 1em;
 }
 .sideMenu {
   display: flex;
