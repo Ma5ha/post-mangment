@@ -16,6 +16,6 @@ export class PostRowComponent implements OnInit {
 
   @HostListener("click")
   redirectTo() {
-    this.router.navigate(["details", this.post.id]);
+    this.router.navigate(["post", this.post.id]);
   }
 }

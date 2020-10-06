@@ -2,10 +2,10 @@
   display: grid;
   grid-template-areas: "h" "m" "f";
   // min-height: 96vh;
-  grid-template-rows: 10% 78% 10%;
-  height: 98vh;
+  grid-template-rows: 10% 80% 10%;
+  height: 100vh;
   width: 100vw;
-  gap: 2%;
+  // gap: 2%;
 }
 
 .header {
@@ -15,7 +15,9 @@
 
 .footer {
   grid-area: f;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
@@ -26,10 +28,21 @@
 }
 .scroll {
   overflow-y: auto;
+  width: 100vw;
+  padding: 1em;
 }
 .sideMenu {
   display: flex;
   z-index: 999999;
   right: 0;
   max-width: 100%;
+}
+
+img {
+  cursor: pointer;
+  width: 0.9em;
+}
+
+p {
+  font-family: "Dancing Script", cursive;
 }

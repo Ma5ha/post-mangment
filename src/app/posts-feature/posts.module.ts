@@ -15,6 +15,7 @@ import { PostCommentComponent } from "./post-comment/post-comment.component";
 import { EditPostComponent } from "./edit-post/edit-post.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ToastModule } from "../toast-feature/toast.module";
+import { RouterLink, RouterModule } from "@angular/router";
 @NgModule({
   declarations: [
     PostsViewComponent,
@@ -34,6 +35,7 @@ import { ToastModule } from "../toast-feature/toast.module";
 
     ToastModule,
     NgbPaginationModule,
+    RouterModule,
   ],
   exports: [PostsViewComponent, PostViewComponent],
 })

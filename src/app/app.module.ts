@@ -8,12 +8,28 @@ import { NavigationComponent } from "./navigation/navigation.component";
 
 import { PostsModule } from "./posts-feature/posts.module";
 import { CommentsModule } from "./comments-feature/comments.module";
-import { SidebarToggleComponent } from './sidebar-toggle/sidebar-toggle.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarToggleComponent } from "./sidebar-toggle/sidebar-toggle.component";
+import {
+  NgbDropdown,
+  NgbDropdownModule,
+  NgbModule,
+} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, NavigationComponent, SidebarToggleComponent],
-  imports: [BrowserModule, AppRoutingModule, PostsModule, CommentsModule, NgbModule],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    NavigationComponent,
+    SidebarToggleComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PostsModule,
+    CommentsModule,
+    NgbModule,
+    NgbDropdownModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

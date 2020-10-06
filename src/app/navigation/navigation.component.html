@@ -1,15 +1,21 @@
-<ul class="nav">
-  <li class="navbar-brand">
-    <ng-content></ng-content>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active"
-      >Home</a
-    >
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/comments']" routerLinkActive="active"
-      >Comments</a
-    >
-  </li>
-</ul>
+<nav class="navbar navbar-expand">
+  <a class="navbar-brand" [routerLink]="['/home']">Logo</a>
+
+  <div>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/comments']"
+          routerLinkActive="active"
+          >Comments</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
