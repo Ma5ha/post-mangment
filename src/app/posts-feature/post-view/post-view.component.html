@@ -1,11 +1,9 @@
-<app-toast></app-toast>
-
 <ng-container *ngIf="!load">
   <div class="spinner-grow text-primary centerMe" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </ng-container>
-
+<app-toast></app-toast>
 <ng-container *ngIf="load">
   <div class="row">
     <div class="col userPostDetails">
