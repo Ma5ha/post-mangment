@@ -1,21 +1,15 @@
-:host {
-  display: grid;
-  position: relative;
-  width: 94vw;
-  height: 78vh;
-  grid-template-areas: "a b";
-  grid-template-columns: 65% 32%;
-  grid-column-gap: 2%;
-}
+// :host {
+//   display: grid;
+//   position: relative;
+//   width: 94vw;
+//   height: 78vh;
+//   grid-template-areas: "a b";
+//   grid-template-columns: 65% 32%;
+//   grid-column-gap: 2%;
+// }
 
 .userPostDetails {
-  display: grid;
-  grid-area: a;
-  grid-template-areas:
-    "a"
-    "b";
-  grid-row-gap: 2%;
-  grid-template-rows: 49% 49%;
+  width: 70%;
 }
 
 .postComments {
@@ -37,6 +31,7 @@
   overflow-y: auto;
 }
 .postDetails {
+  position: relative;
   grid-area: a;
 }
 

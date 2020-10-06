@@ -1,37 +1,40 @@
 <app-toast></app-toast>
-<ng-container *ngIf="load">
-  <div class="userPostDetails">
-    <div class="postDetails rounded shadow p-3 mb-5 bg-white rounded">
-      <app-post-details [post]="post"
-        ><button
-          class="btn btn-white text-primary rounded-pill border border-primary"
-          (click)="editPost()"
-        >
-          Edit Post
-        </button></app-post-details
-      >
-    </div>
-    <div class="userDetails rounded shadow p-3 mb-5 bg-white rounded">
-      <app-user-info [user]="user"></app-user-info>
-    </div>
-  </div>
-
-  <div class="postComments rounded shadow p-3 mb-5 bg-white rounded">
-    <div class="title border-bottom border-primary">
-      <h3 class="ont-weight-light">Post Comments</h3>
-    </div>
-
-    <div class="comments">
-      <app-post-comment
-        *ngFor="let comment of comments"
-        [comment]="comment"
-      ></app-post-comment>
-    </div>
-  </div>
-</ng-container>
 
 <ng-container *ngIf="!load">
   <div class="spinner-grow text-primary centerMe" role="status">
     <span class="sr-only">Loading...</span>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="load">
+  <div class="row">
+    <div class="col userPostDetails">
+      <div class="postDetails col-lg rounded shadow p-3 mb-5 bg-white rounded">
+        <app-post-details [post]="post"
+          ><button
+            class="btn btn-white text-primary rounded-pill border border-primary"
+            (click)="editPost()"
+          >
+            Edit Post
+          </button></app-post-details
+        >
+      </div>
+      <div class="userDetails col-lg rounded shadow p-3 mb-5 bg-white rounded">
+        <app-user-info [user]="user"></app-user-info>
+      </div>
+    </div>
+
+    <div class="postComments col-lg rounded shadow p-3 mb-5 bg-white rounded">
+      <div class="title border-bottom border-primary">
+        <h3 class="ont-weight-light">Post Comments</h3>
+      </div>
+
+      <div class="comments">
+        <app-post-comment
+          *ngFor="let comment of comments"
+          [comment]="comment"
+        ></app-post-comment>
+      </div>
+    </div>
   </div>
 </ng-container>
