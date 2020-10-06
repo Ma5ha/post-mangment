@@ -1,22 +1,22 @@
 :host {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 1em;
   font-size-adjust: 1;
 }
 
 .flexRow {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 1%;
 }
-h6 {
-  margin: auto;
-}
-p {
-  margin: auto;
-}
+// h6 {
+//   margin: auto;
+// }
+// p {
+//   margin: auto;
+// }
 
 .m {
   margin: calc(1em / 9);
@@ -27,7 +27,4 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: auto;
-  margin-left: 30%;
-  width: 66%;
 }
