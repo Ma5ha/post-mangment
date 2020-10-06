@@ -1,11 +1,37 @@
 <div
-  class="header border border-primary border-top-0 border-right-0 border-left-0"
+  class="header navbar-light bg-light padding p-0 border border-primary border-top-0 border-right-0 border-left-0"
 >
-  <app-navigation>
-    <a class="nav-link" [routerLink]="['/home']"
-      ><h3 class="text-center font-w-600">Logo</h3></a
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" [routerLink]="['/home']">Logo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-  </app-navigation>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/comments']"
+            routerLinkActive="active"
+            >Comments</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 <div class="main container-fluid d-flex padding p-0">
   <div class="scroll">
