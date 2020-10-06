@@ -29,7 +29,7 @@
       <app-post-comment
         *ngFor="let comment of comments"
         [comment]="comment"
-        [routerLink]="['/details/', comment.postId]"
+        [routerLink]="['/post/', comment.postId]"
       ></app-post-comment>
     </div>
   </div>

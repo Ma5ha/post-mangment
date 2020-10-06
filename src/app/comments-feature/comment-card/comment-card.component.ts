@@ -17,7 +17,7 @@ export class CommentCardComponent {
     this.router.navigate([
       {
         outlets: {
-          primary: ["details", this.comment.postId],
+          primary: ["post", this.comment.postId],
           commentsList: null,
         },
       },
