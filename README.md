@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 
-## Development server
+## Installation
+
+To run this project download. After download install necessary 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -28,6 +30,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3OTM4Mjc1LDg5NDEwMTI2NCwtNzYzMT
+eyJoaXN0b3J5IjpbMzQ5NTI3NDUyLDg5NDEwMTI2NCwtNzYzMT
 MxMDhdfQ==
 -->
