@@ -1,6 +1,6 @@
 # PostsManagmentApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.  Application allows you manage post and comments, by allowing some basic CRUD functionality.  Project is built with Angular, Ng-Bootstrap and as mockup data # [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.  Application allows you manage post and comments, by allowing some basic CRUD functionality.  Project is built with Angular, [Ng-Bootstrap](https://ng-bootstrap.github.io/#/home) and, as mockup data, [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 
 
 
@@ -28,6 +28,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk3MDUxNTgzLDg5NDEwMTI2NCwtNzYzMT
+eyJoaXN0b3J5IjpbMjA3OTM4Mjc1LDg5NDEwMTI2NCwtNzYzMT
 MxMDhdfQ==
 -->
