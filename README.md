@@ -9,8 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 To run this project locally first download it. After download install necessary  dependencies by running npm install, or yarn install, depending on your packet manager. 
 
 
-Once the project is set and ready to  start server run `ng serve` an
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Once the project is set and ready, to  start server run `ng serve` and navigate to  `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -32,6 +31,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTMwMjczMCw4OTQxMDEyNjQsLTc2Mz
-EzMTA4XX0=
+eyJoaXN0b3J5IjpbLTE5Mzg3NzE3MjcsODk0MTAxMjY0LC03Nj
+MxMzEwOF19
 -->
