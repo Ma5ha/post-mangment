@@ -1,6 +1,6 @@
 # PostsManagmentApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.  Application allows you manage post and comments, by allowing some basic CRUD functionality.  Project is built on Angular, Ng-Bootstrap 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.  Application allows you manage post and comments, by allowing some basic CRUD functionality.  Project is built with Angular, Ng-Bootstrap and as mockup dataset 
 
 ## Development server
 
@@ -26,6 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDY1MTA1Niw4OTQxMDEyNjQsLTc2Mz
-EzMTA4XX0=
+eyJoaXN0b3J5IjpbOTE1MTIzMzUzLDg5NDEwMTI2NCwtNzYzMT
+MxMDhdfQ==
 -->
